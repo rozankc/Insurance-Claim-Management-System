@@ -31,11 +31,11 @@ FNOL (First Notice of Loss)  ──►  Claim Registration  ──►  Exposure 
                                                         Financial Processing & Settlement
 ```
 
-> 💡 **Key capability:** Role-based access control, full audit trail via the History table, and automated payment constraint enforcement ensure accountability at every stage.
+> **Key capability:** Role-based access control, full audit trail via the History table, and automated payment constraint enforcement ensure accountability at every stage.
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 <!-- REPLACE with your workflow/architecture diagram -->
 <p align="center">
@@ -56,7 +56,7 @@ The system is built around **12 interconnected tables** that handle every aspect
 
 ---
 
-## 🗄️ Database Schema
+## Database Schema
 
 ### Claim Table
 Stores all insurance claim records, linking to policy, exposure, history, and FNOL.
@@ -239,7 +239,7 @@ CREATE TABLE LossState (
 
 ---
 
-## 🔀 Table Relationships
+## Table Relationships
 
 | Relationship | Type |
 |--------------|------|
@@ -258,7 +258,7 @@ CREATE TABLE LossState (
 
 ---
 
-## 📚 Data Dictionary
+## Data Dictionary
 
 Each table's columns, types, and descriptions are listed below.
 
@@ -382,7 +382,7 @@ Each table's columns, types, and descriptions are listed below.
 
 ---
 
-## 🔍 SQL Analysis Queries
+## SQL Analysis Queries
 
 Ten analytical queries were developed to extract business insights from the database.
 
@@ -396,8 +396,7 @@ LEFT JOIN claim c ON p.policy_id = c.policy_id
 GROUP BY p.policy_id
 LIMIT 0, 1000;
 ```
-
-<!-- Add screenshot: images/analysis1.png -->
+<!-- <img src="Images/Picture1.png" alt="System Banner" width="800"/> -->
 
 ---
 
@@ -543,97 +542,6 @@ ORDER BY activity_year DESC, activity_month DESC;
 ```
 
 <!-- Add screenshot: images/analysis10.png -->
-
----
-
-## 📁 Project Structure
-
-```
-📦 insurance-claim-management-system/
- ┣ 📂 Data/
- ┃ ┣ 📊 Claim.csv
- ┃ ┣ 📊 CoveredPeople.csv
- ┃ ┣ 📊 Employer.csv
- ┃ ┣ 📊 Exposure.csv
- ┃ ┣ 📊 Financials.csv
- ┃ ┣ 📊 FNOL.csv
- ┃ ┣ 📊 History.csv
- ┃ ┣ 📊 LossState.csv
- ┃ ┣ 📊 Losstype.csv
- ┃ ┣ 📊 Policy.csv
- ┃ ┣ 📊 PolicyCoverage.csv
- ┃ ┗ 📊 Vehicle.csv
- ┣ 📂 images/
- ┃ ┣ 🖼️ erd.png                  # Entity Relationship Diagram
- ┃ ┣ 🖼️ workflow.png              # System workflow diagram
- ┃ ┣ 🖼️ analysis1.png            # Query result screenshots
- ┃ ┗ 🖼️ ...
- ┣ 🗄️ ClaimManagementSystem.sql   # Full database schema + data load queries
- ┣ 📄 Report.pdf                  # Full project report
- ┗ 📄 README.md
-```
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- [MySQL 8.0+](https://dev.mysql.com/downloads/mysql/)
-- [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/rozankc/insurance-claim-management-system.git
-cd insurance-claim-management-system
-```
-
-### 2. Create the Database
-
-Open MySQL Workbench and run:
-
-```sql
-CREATE DATABASE IF NOT EXISTS CLAIM_MANAGEMENT_SYSTEM;
-USE CLAIM_MANAGEMENT_SYSTEM;
-```
-
-### 3. Run the SQL Script
-
-Execute the full schema and data loading script:
-
-```bash
-source ClaimManagementSystem.sql;
-```
-
-Or open `ClaimManagementSystem.sql` in MySQL Workbench and click **Execute**.
-
-### 4. Load CSV Data
-
-Update the file paths in the `LOAD DATA INFILE` commands to match your local MySQL upload directory, then run each load command:
-
-```sql
-LOAD DATA INFILE 'C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/Claim.csv'
-INTO TABLE Claim
-FIELDS TERMINATED BY ','
-ENCLOSED BY '"'
-LINES TERMINATED BY '\n'
-IGNORE 1 ROWS;
-```
-
-> ⚠️ Repeat for each CSV file in the `Data/` folder. Load **parent tables before child tables** to respect foreign key constraints.
-
-### 5. Load Order (Important)
-
-Due to foreign key dependencies, load tables in this order:
-
-```
-1. LossType       6. PolicyCoverage
-2. LossState      7. CoveredPeople
-3. Employer       8. VehicleDetails
-4. Financial      9. Policy
-5. LossType      10. FNOL → Exposure → History → Claim
-```
 
 ---
 
