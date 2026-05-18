@@ -385,6 +385,7 @@ LIMIT 0, 1000;
 <p align="center">
   <img src="Images/Picture1.png" width="700"/>
 </p>
+
 ---
 
 ### Analysis 2 — Top Claim-Processing Employees
@@ -400,10 +401,12 @@ GROUP BY e.employee_id
 ORDER BY claims_processed DESC
 LIMIT 5;
 ```
-
-<!-- Add screenshot: images/analysis2.png -->
+<p align="center">
+  <img src="Images/Picture2.png" width="700"/>
+</p>
 
 ---
+
 
 ### Analysis 3 — Claims with Missing Exposure Details
 Identifies data entry gaps for quality control.
@@ -414,10 +417,12 @@ FROM claim c
 LEFT JOIN exposure e ON c.exposure_id = e.exposure_id
 WHERE e.exposure_id IS NULL;
 ```
-
-<!-- Add screenshot: images/analysis3.png -->
+<p align="center">
+  <img src="Images/Picture3.png" width="700"/>
+</p>
 
 ---
+
 
 ### Analysis 4 — Claim Distribution by Severity
 Analyses how claims are distributed across severity levels.
@@ -430,7 +435,9 @@ GROUP BY f.severity
 ORDER BY claim_count DESC;
 ```
 
-<!-- Add screenshot: images/analysis4.png -->
+<p align="center">
+  <img src="Images/Picture4.png" width="700"/>
+</p>
 
 ---
 
@@ -447,7 +454,9 @@ GROUP BY p.policyNumber, p.policyHolderName
 ORDER BY claim_count DESC;
 ```
 
-<!-- Add screenshot: images/analysis5.png -->
+<p align="center">
+  <img src="Images/Picture5.png" width="700"/>
+</p>
 
 ---
 
@@ -464,7 +473,9 @@ GROUP BY p.policy_id, p.policyNumber
 ORDER BY claim_count DESC;
 ```
 
-<!-- Add screenshot: images/analysis6.png -->
+<p align="center">
+  <img src="Images/Picture6.png" width="700"/>
+</p>
 
 ---
 
@@ -480,7 +491,9 @@ JOIN policycoverage pc ON p.policyCoverage_id = pc.policyCoverage_id
 WHERE p.policyHolderName IN ('John Doe', 'Jane Smith');
 ```
 
-<!-- Add screenshot: images/analysis7.png -->
+<p align="center">
+  <img src="Images/Picture7.png" width="700"/>
+</p>
 
 ---
 
@@ -495,7 +508,9 @@ ORDER BY transaction_count DESC
 LIMIT 5;
 ```
 
-<!-- Add screenshot: images/analysis8.png -->
+<p align="center">
+  <img src="Images/Picture8.png" width="700"/>
+</p>
 
 ---
 
@@ -511,7 +526,9 @@ GROUP BY f.paymentStatus, f.paymentType
 ORDER BY f.paymentStatus, total_transactions DESC;
 ```
 
-<!-- Add screenshot: images/analysis9.png -->
+<p align="center">
+  <img src="Images/Picture9.png" width="700"/>
+</p>
 
 ---
 
@@ -528,7 +545,9 @@ GROUP BY activity_year, activity_month
 ORDER BY activity_year DESC, activity_month DESC;
 ```
 
-<!-- Add screenshot: images/analysis10.png -->
+<p align="center">
+  <img src="Images/Picture10.png" width="700"/>
+</p>
 
 ---
 
