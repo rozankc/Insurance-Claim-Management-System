@@ -11,7 +11,11 @@
 
 <p><i>A comprehensive relational database system that manages insurance claims from First Notice of Loss (FNOL) through to final financial settlement.</i></p>
 
-<!-- <img src="Images/ERD.png" alt="System Banner" width="800"/> -->
+<p align="center">
+  <img src="Images/ERD.png" alt="Entity Relationship Diagram (ERD)" width="700"/>
+  <br/>
+  <em>Figure 4 — AUC and Log-Loss Comparison: Lecture-Quiz Model vs. Quiz-Only Model</em>
+</p>
 
 </div>
 
