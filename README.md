@@ -218,7 +218,7 @@ CREATE TABLE LossState (
 
 ---
 
-## 🔗 Entity Relationship Diagram
+## Entity Relationship Diagram
 <p align="center">
   <img src="Images/ERD.png" alt="Entity Relationship Diagram (ERD)" width="700"/>
   <br/>
