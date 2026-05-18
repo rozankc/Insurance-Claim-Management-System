@@ -14,6 +14,7 @@
 
 ---
 
+
 ## Project Overview
 
 The **Insurance Claim Management System (CMS)** is a sophisticated relational database solution designed to optimize how insurance companies manage their claims. It eliminates data silos by consolidating claim, policy, exposure, and financial data into a single unified database — maintaining both efficiency and integrity at scale.
@@ -223,6 +224,7 @@ CREATE TABLE LossState (
   <br/>
   <em>Entity Relationship Diagram (ERD) for the Insurance Claim Management System</em>
 </p>
+
 ---
 
 ## Table Relationships
