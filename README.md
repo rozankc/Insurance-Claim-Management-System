@@ -33,13 +33,6 @@ FNOL (First Notice of Loss)  ──►  Claim Registration  ──►  Exposure 
 ---
 
 ## System Architecture
-
-<p align="center">
-  <img src="Images/ERD.png" alt="Entity Relationship Diagram (ERD)" width="700"/>
-  <br/>
-  <em>Entity Relationship Diagram (ERD)</em>
-</p>
-
 The system is built around **12 interconnected tables** that handle every aspect of the claim process:
 
 | Layer | Tables | Purpose |
@@ -225,14 +218,11 @@ CREATE TABLE LossState (
 ---
 
 ## 🔗 Entity Relationship Diagram
-
-<!-- REPLACE with your ERD image -->
 <p align="center">
-  <img src="images/erd.png" alt="Entity Relationship Diagram" width="800"/>
+  <img src="Images/ERD.png" alt="Entity Relationship Diagram (ERD)" width="700"/>
   <br/>
-  <em>Figure 2 — Entity Relationship Diagram (ERD) for the Insurance Claim Management System</em>
+  <em>Entity Relationship Diagram (ERD) for the Insurance Claim Management System</em>
 </p>
-
 ---
 
 ## Table Relationships
@@ -392,8 +382,9 @@ LEFT JOIN claim c ON p.policy_id = c.policy_id
 GROUP BY p.policy_id
 LIMIT 0, 1000;
 ```
-<!-- <img src="Images/Picture1.png" alt="System Banner" width="800"/> -->
-
+<p align="center">
+  <img src="Images/Picture1.png" width="700"/>
+</p>
 ---
 
 ### Analysis 2 — Top Claim-Processing Employees
