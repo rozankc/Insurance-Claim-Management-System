@@ -10,13 +10,6 @@
 </p>
 
 <p><i>A comprehensive relational database system that manages insurance claims from First Notice of Loss (FNOL) through to final financial settlement.</i></p>
-
-<p align="center">
-  <img src="Images/ERD.png" alt="Entity Relationship Diagram (ERD)" width="700"/>
-  <br/>
-  <em>Entity Relationship Diagram (ERD)</em>
-</p>
-
 </div>
 
 ---
@@ -41,11 +34,10 @@ FNOL (First Notice of Loss)  ──►  Claim Registration  ──►  Exposure 
 
 ## System Architecture
 
-<!-- REPLACE with your workflow/architecture diagram -->
 <p align="center">
-  <img src="images/workflow.png" alt="System Workflow" width="750"/>
+  <img src="Images/ERD.png" alt="Entity Relationship Diagram (ERD)" width="700"/>
   <br/>
-  <em>Figure 1 — End-to-end claim processing workflow</em>
+  <em>Entity Relationship Diagram (ERD)</em>
 </p>
 
 The system is built around **12 interconnected tables** that handle every aspect of the claim process:
