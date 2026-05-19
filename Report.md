@@ -6,7 +6,7 @@
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Project Description](#-project-description)
 - [Scope](#-scope)
@@ -21,7 +21,7 @@
 
 ---
 
-## 📖 Project Description
+## Project Description
 
 The **Insurance Claim Management System (CMS)** is a sophisticated and comprehensive solution aimed at optimizing the way insurance companies manage their claims. Designed with scalability and efficiency in mind, it addresses critical problems that insurance providers face in their day-to-day work.
 
@@ -32,7 +32,7 @@ From the initial First Notice of Loss (FNOL) to final claim settlement, this CMS
 
 ---
 
-## 🔭 Scope
+## Scope
 
 The system manages the full insurance claim lifecycle:
 
@@ -45,7 +45,7 @@ The system manages the full insurance claim lifecycle:
 
 ---
 
-## ⚙️ Project Requirements
+## Project Requirements
 
 ### Operating Environment
 
@@ -93,7 +93,7 @@ The system manages the full insurance claim lifecycle:
 
 ---
 
-## 📋 Business Rules
+## Business Rules
 
 | Rule | Description |
 |------|-------------|
@@ -110,7 +110,7 @@ The system manages the full insurance claim lifecycle:
 
 ---
 
-## 🔗 Entity Relationship Diagram
+## Entity Relationship Diagram
 
 <!-- REPLACE with your ERD image -->
 <p align="center">
@@ -123,7 +123,7 @@ The ERD includes **12 entities** capturing all aspects of the claim process — 
 
 ---
 
-## 🔀 Table Relationships
+## Table Relationships
 
 | Relationship | Type |
 |--------------|------|
@@ -142,7 +142,7 @@ The ERD includes **12 entities** capturing all aspects of the claim process — 
 
 ---
 
-## 📚 Data Dictionary
+## Data Dictionary
 
 The data dictionary defines all data elements — names, types, formats — to ensure consistency and standardization across the system.
 
@@ -266,7 +266,7 @@ The data dictionary defines all data elements — names, types, formats — to e
 
 ---
 
-## 🗄️ Entity Generation & Schema
+## Entity Generation & Schema
 
 ### Loading Data from CSV
 
@@ -292,7 +292,7 @@ LossType → LossState → Employer → Financial → PolicyCoverage
 
 ---
 
-## 🔍 Data Analysis
+## Data Analysis
 
 Ten SQL queries were developed to extract business insights. Results support decision-making across operations, HR, and finance.
 
