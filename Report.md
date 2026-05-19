@@ -471,6 +471,4 @@ ORDER BY activity_year DESC, activity_month DESC;
 
 <div align="center">
   <sub>INFO 5707.401 — Data Modelling for Information Professionals | University of North Texas</sub>
-</div>
-  <sub>University of North Texas — Department of Information Science</sub>
-</div>
+</div> 
