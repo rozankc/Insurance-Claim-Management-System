@@ -114,9 +114,9 @@ The system manages the full insurance claim lifecycle:
 
 <!-- REPLACE with your ERD image -->
 <p align="center">
-  <img src="images/erd.png" alt="ERD" width="800"/>
+  <img src="Images/ERD.png" alt="Entity Relationship Diagram (ERD)" width="700"/>
   <br/>
-  <em>Figure 1 — Entity Relationship Diagram for the Insurance Claim Management System</em>
+  <em>Entity Relationship Diagram (ERD) for the Insurance Claim Management System</em>
 </p>
 
 The ERD includes **12 entities** capturing all aspects of the claim process — from claims and policies, to exposures, financial transactions, audit history, and FNOL.
@@ -310,8 +310,7 @@ GROUP BY p.policy_id
 LIMIT 0, 1000;
 ```
 
-<!-- Add screenshot: images/analysis1.png -->
-<p align="center"><img src="images/analysis1.png" alt="Analysis 1" width="700"/></p>
+<p align="center"><img src="Images/Picture1.png" alt="Analysis 1" width="700"/></p>
 
 ---
 
@@ -329,9 +328,7 @@ GROUP BY e.employee_id
 ORDER BY claims_processed DESC
 LIMIT 5;
 ```
-
-<!-- Add screenshot: images/analysis2.png -->
-<p align="center"><img src="images/analysis2.png" alt="Analysis 2" width="700"/></p>
+<p align="center"><img src="Images/Picture2.png" alt="Analysis 2" width="700"/></p>
 
 ---
 
@@ -346,8 +343,7 @@ LEFT JOIN exposure e ON c.exposure_id = e.exposure_id
 WHERE e.exposure_id IS NULL;
 ```
 
-<!-- Add screenshot: images/analysis3.png -->
-<p align="center"><img src="images/analysis3.png" alt="Analysis 3" width="700"/></p>
+<p align="center"><img src="Images/Picture3.png" alt="Analysis 3" width="700"/></p>
 
 ---
 
@@ -363,8 +359,7 @@ GROUP BY f.severity
 ORDER BY claim_count DESC;
 ```
 
-<!-- Add screenshot: images/analysis4.png -->
-<p align="center"><img src="images/analysis4.png" alt="Analysis 4" width="700"/></p>
+<p align="center"><img src="Images/Picture4.png" alt="Analysis 4" width="700"/></p>
 
 ---
 
@@ -382,8 +377,7 @@ GROUP BY p.policyNumber, p.policyHolderName
 ORDER BY claim_count DESC;
 ```
 
-<!-- Add screenshot: images/analysis5.png -->
-<p align="center"><img src="images/analysis5.png" alt="Analysis 5" width="700"/></p>
+<p align="center"><img src="Images/Picture5.png" alt="Analysis 5" width="700"/></p>
 
 ---
 
@@ -401,8 +395,7 @@ GROUP BY p.policy_id, p.policyNumber
 ORDER BY claim_count DESC;
 ```
 
-<!-- Add screenshot: images/analysis6.png -->
-<p align="center"><img src="images/analysis6.png" alt="Analysis 6" width="700"/></p>
+<p align="center"><img src="Images/Picture6.png" alt="Analysis 6" width="700"/></p>
 
 ---
 
@@ -419,8 +412,7 @@ JOIN policycoverage pc ON p.policyCoverage_id  = pc.policyCoverage_id
 WHERE p.policyHolderName IN ('John Doe', 'Jane Smith');
 ```
 
-<!-- Add screenshot: images/analysis7.png -->
-<p align="center"><img src="images/analysis7.png" alt="Analysis 7" width="700"/></p>
+<p align="center"><img src="Images/Picture7.png" alt="Analysis 7" width="700"/></p>
 
 ---
 
@@ -436,8 +428,7 @@ ORDER BY transaction_count DESC
 LIMIT 5;
 ```
 
-<!-- Add screenshot: images/analysis8.png -->
-<p align="center"><img src="images/analysis8.png" alt="Analysis 8" width="700"/></p>
+<p align="center"><img src="Images/Picture8.png" alt="Analysis 8" width="700"/></p>
 
 ---
 
@@ -455,7 +446,7 @@ ORDER BY f.paymentStatus, total_transactions DESC;
 ```
 
 <!-- Add screenshot: images/analysis9.png -->
-<p align="center"><img src="images/analysis9.png" alt="Analysis 9" width="700"/></p>
+<p align="center"><img src="Images/Picture9.png" alt="Analysis 9" width="700"/></p>
 
 ---
 
@@ -473,19 +464,13 @@ GROUP BY activity_year, activity_month
 ORDER BY activity_year DESC, activity_month DESC;
 ```
 
-<!-- Add screenshot: images/analysis10.png -->
-<p align="center"><img src="images/analysis10.png" alt="Analysis 10" width="700"/></p>
+<p align="center"><img src="Images/Picture10.png" alt="Analysis 10" width="700"/></p>
 
 ---
 
-## 🙏 Acknowledgments
-
-> **Instructor:** Dr. Tozammel Hossain
-> **Course:** INFO 5707.401 — Data Modelling for Information Professionals
-> **Institution:** University of North Texas, Department of Information Science
-
----
 
 <div align="center">
+  <sub>INFO 5707.401 — Data Modelling for Information Professionals | University of North Texas</sub>
+</div>
   <sub>University of North Texas — Department of Information Science</sub>
 </div>
